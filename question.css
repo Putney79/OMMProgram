@@ -41,12 +41,12 @@
     margin: 0 10px;
 }
 
-.question-background, .current-question {
-    font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+.current-question {
+    font-size: clamp(1 rem, 0.543rem + 0.612vw, 1.3rem);
 }
 
 .question-img {
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
 }
 
@@ -55,5 +55,9 @@
 }
 
 .question-background {
-    font-size: clamp(1rem, 0.643rem + 0.652vw, 1.2rem);
+    font-size: clamp(1rem, 0.643rem + 0.552vw, 1.2rem);
+}
+
+.background-info-list li {
+    font-size: clamp(.9rem, 0.643rem + 0.352vw, 1.1rem);
 }
