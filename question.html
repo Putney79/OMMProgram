@@ -30,43 +30,46 @@
           <!-- Content of the selected tab will go here -->
     </div>
     
-    <div class="container-fluid question-area-container mx-auto my-4 shadow row">
-        <form class="question-area my-2 mx-2 col-6">
-            <h2 class="question-background">
-                This is question background, how do you define question? With another question. Thanks.
-            </h2>
-            <ul>
-                <li>This is an option</li>
-                <li>This is an option</li>
-                <li>This is an option</li>
-                <li>This is an option</li>
-                <li>This is an option</li>
-                <li>*This will have to be dynamically created btw*</li>
-            </ul>
-            <h4>This is the actual question that will need an answer?</h4>
-            <div>
-                <input type="radio" id="option1" name="option" value="option1"   />
-                <label for="option1">Option 1</label>
-              </div>
-              <div>
-                <input type="radio" id="option2" name="option" value="option2"   />
-                <label for="option2">Option 2</label>
-              </div>
-              <div>
-                <input type="radio" id="option3" name="option" value="option3"   />
-                <label for="option3">Option 3</label>
-              </div>
-              <div>
-                <input type="radio" id="option4" name="option" value="option4"   />
-                <label for="option4">Option 4</label>
-              </div>
-              <div>
-                <input type="radio" id="option4" name="option" value="option5"   />
-                <label for="option4">Option 5</label>
-              </div>
-        </form>
-        <div class="col-6">
-            <img src="./Figure_38_03_10.jpg" class="img-fluid" alt="">
+    <div class="container-fluid question-area-container mx-auto my-4 shadow">
+        <div class="row">
+            <form class="question-area my-5 mx-4 col-6" method="post">
+                <h2 class="question-background">
+                    This is question background, how do you define question? With another question. Thanks.
+                </h2>
+                <ul>
+                    <li>This is background info</li>
+                    <li>This is background info</li>
+                    <li>This is background info</li>
+                    <li>This is background info</li>
+                    <li>This is background info</li>
+                    <li>*This will have to be dynamically created btw*</li>
+                </ul>
+                <h4 class="current-question">This is the actual question that will need an answer?</h4>
+                <div>
+                    <input type="radio" id="option1" name="option" value="option1"   />
+                    <label for="option1">Option 1</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="option2" name="option" value="option2"   />
+                    <label for="option2">Option 2</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="option3" name="option" value="option3"   />
+                    <label for="option3">Option 3</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="option4" name="option" value="option4"   />
+                    <label for="option4">Option 4</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="option4" name="option" value="option5"   />
+                    <label for="option4">Option 5</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary my-5" name="submit" value="submit">Submit</button>
+            </form>
+            <div class="col-6 question-img my-4 mx-3 container-fluid">
+                <img src="./Figure_38_03_10.jpg" class="img-fluid" alt="">
+            </div>
         </div>
     </div>
 
