@@ -86,3 +86,11 @@ h2 {
     font-weight: bold;
 }
 
+ .toggle-switches h3 {
+            font-size: 16px; /* Adjust the font size as needed */
+        }
+
+.toggle-switches .form-check {
+            display: inline-block;
+            margin-right: 20px; /* Adjust the margin as needed */
+        }
