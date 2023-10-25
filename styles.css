@@ -94,3 +94,7 @@ h2 {
             display: inline-block;
             margin-right: 20px; /* Adjust the margin as needed */
         }
+.checkbox-group-horizontal {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
