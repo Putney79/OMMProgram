@@ -98,3 +98,29 @@ h2 {
     display: inline-block;
     margin-right: 10px; /* Adjust the margin as needed */
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px; /* Adjust the margin as needed */
+}
+
+.tooltip-icon {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.tooltip:hover .tooltip-icon {
+    display: block;
+}
+
+.question-counter {
+    margin-left: 5px; /* Adjust the margin as needed */
+}
