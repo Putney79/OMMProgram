@@ -106,21 +106,13 @@ h2 {
     cursor: help; /* Change the cursor to a pointer on hover */
 }
 
-.tooltip .tooltip-icon {
-    display: inline-block;
+.tooltip-icon {
+    font-size: 16px; /* Adjust the size as needed */
     color: blue;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
     border: 1px solid blue;
     border-radius: 50%;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 5px; /* Adjust the margin as needed */
+    padding: 5px; /* Adjust the padding to control the circle size */
+    margin-left: 5px; /* Adjust the spacing between text and the icon */
 }
 
 .tooltip:hover .tooltiptext {
