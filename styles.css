@@ -102,25 +102,41 @@ h2 {
 .tooltip {
     position: relative;
     display: inline-block;
-    margin-left: 5px; /* Adjust the margin as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+    cursor: help; /* Change the cursor to a pointer on hover */
 }
 
 .tooltip-icon {
-    display: none;
-    position: absolute;
-    top: -20px;
-    left: 0;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
     background-color: #333;
     color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 5px; /* Adjust the margin as needed */
 }
 
-.tooltip:hover .tooltip-icon {
+.tooltip:hover .tooltiptext {
     display: block;
 }
 
+.tooltiptext {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
 .question-counter {
     margin-left: 5px; /* Adjust the margin as needed */
 }
