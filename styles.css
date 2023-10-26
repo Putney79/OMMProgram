@@ -141,4 +141,9 @@ h2 {
     font-size: 12px; /* Adjust the font size as needed */
     color: gray; /* Set the text color to gray or any desired color */
     margin: 0 5px; /* Adjust the margin to control the spacing */
+    width: 20px; /* Adjust the size of the circle */
+    height: 20px; /* Adjust the size of the circle */
+    line-height: 20px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.1);
 }
