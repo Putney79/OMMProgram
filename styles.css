@@ -107,15 +107,15 @@ h2 {
 }
 
 .tooltip-icon {
-    font-size: 16px; /* Adjust the font size as needed */
+    font-size: 8px; /* Adjust the font size as needed */
     color: blue; /* Change the text color to blue */
     display: inline-block;
-    width: 20px; /* Adjust the size of the circle */
-    height: 20px; /* Adjust the size of the circle */
+    width: 10px; /* Adjust the size of the circle */
+    height: 10px; /* Adjust the size of the circle */
     line-height: 20px;
     text-align: center;
     background-color: rgba(0, 0, 255, 0.2); /* Blue background color with some transparency */
-    border-radius: 50%;
+    border-radius: 25%;
     margin-right: 5px; /* Adjust the margin as needed */
     cursor: help; /* Change the cursor to a pointer on hover */
 }
