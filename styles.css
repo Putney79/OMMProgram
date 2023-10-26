@@ -106,7 +106,7 @@ h2 {
     cursor: help; /* Change the cursor to a pointer on hover */
 }
 
-.tooltip-icon {
+.tooltip .tooltip-icon {
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -124,7 +124,7 @@ h2 {
     display: block;
 }
 
-.tooltiptext {
+.tooltip .tooltiptext {
     display: none;
     position: absolute;
     background-color: #333;
@@ -132,11 +132,12 @@ h2 {
     border-radius: 5px;
     padding: 5px;
     font-size: 12px;
-    bottom: 120%;
+    top: 100%; /* Show the tooltip below the icon */
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
 }
+
 .question-counter {
     margin-left: 5px; /* Adjust the margin as needed */
 }
