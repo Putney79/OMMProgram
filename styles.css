@@ -140,5 +140,7 @@ h2 {
 }
 
 .question-counter {
-    margin-left: 5px; /* Adjust the margin as needed */
+    font-size: 12px; /* Adjust the font size as needed */
+    color: gray; /* Set the text color to gray or any desired color */
+    margin: 0 5px; /* Adjust the margin to control the spacing */
 }
