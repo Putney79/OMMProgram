@@ -54,8 +54,6 @@ a {
     border-bottom: 1px solid rgba(0,0,0,0.1)
 
 }
-
-
 h2 {
     font-size: large;
 }
@@ -115,7 +113,7 @@ h2 {
     line-height: 20px;
     text-align: center;
     background-color: rgba(0, 0, 255, 0.2); /* Blue background color with some transparency */
-    border-radius: 25%;
+    border-radius: 50%;
     margin-right: 5px; /* Adjust the margin as needed */
     cursor: help; /* Change the cursor to a pointer on hover */
 }
