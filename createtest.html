@@ -56,11 +56,11 @@
             </nav>
       </header>
       <section class="statistics">
-          <h2>Test Mode</h2>
-          <h2 class="tooltip">
-              <span class="tooltip-icon">i</span>
-              <span class="tooltiptext">Test Mode will allow you to choose between a timed test format or a tutor format to help you study for any upcoming tests.</span>
+          <h2>
+              Test Mode
+              <span class="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip for Test Mode">         
           </h2>
+
       <div class="toggle-switches">
                     <div class="form-check form-switch">
                         <label class="form-check-label" for="timedModeSwitch">Timed</label>
@@ -105,16 +105,23 @@
                 <input type="range" id="questionCount" min="10" max="50" value="10">
                 <output for="questionCount" id="questionCountOutput">10</output>
     </div>
-           <script>
-                // JavaScript to update the number of questions based on the slider
-                const questionCountSlider = document.getElementById("questionCount");
-                const questionCountOutput = document.getElementById("questionCountOutput");
+    <script>
+        // JavaScript to update the number of questions based on the slider
+        const questionCountSlider = document.getElementById("questionCount");
+        const questionCountOutput = document.getElementById("questionCountOutput");
                 
-                questionCountSlider.addEventListener("input", function () {
-                    questionCountOutput.textContent = questionCountSlider.value;
-                });
-            </script>
+        questionCountSlider.addEventListener("input", function () {
+            questionCountOutput.textContent = questionCountSlider.value;
+        });
+    </script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
   </section>
+    
   
           <!-- Content of the selected tab will go here -->
       </main>
