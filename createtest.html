@@ -145,16 +145,45 @@
         });
     </script>
     <script>
+          var categoryCheckbox = document.getElementById("categoryCheckbox");
+          var nestedCategoryCheckbox = document.getElementById("nestedCategoryCheckbox");
+          nestedCategoryCheckbox.style.display = "none";
+          categoryCheckbox.addEventListener("click", function() {
+            if (nestedCategoryCheckbox.style.display === "none") {
+              nestedCategoryCheckbox.style.display = "block";
+            } else {
+              nestedCategoryCheckbox.style.display = "none";
+            }
+          });
+        var bodyRegionCheckbox = document.getElementById("bodyRegionCheckbox");
+        var nestedBodyRegionCheckbox = document.getElementById("nestedBodyRegionCheckbox");
+        nestedBodyRegionCheckbox.style.display = "none";
+        bodyRegionCheckbox.addEventListener("click", function() {
+            if (nestedBodyRegionCheckbox.style.display === "none") {
+                nestedBodyRegion.style.display = "block";
+            } else {
+                nestedBodyRegionCheckbox.style.display = "none";
+            }
+        });
+        var treatmentTechniquesCheckbox = document.getElementById("treatmentTechniquesCheckbox");
+        var nestedTreatmentTechniquesCheckbox = document.getElementById("nestedTreatmentTechniquesCheckbox");
+        nestedTreatmentTechniquesCheckbox.style.display = "none";
+        treatmentTechniquesCheckbox.addEventListener("click", function() {
+            if (nestedTreatmentTechniquesCheckbox.style.display === "none") {
+                nestedTreatmentTechniquesCheckbox.style.display = "block";
+            } else {
+                nestedTreatmentTechniquesCheckbox.style.display = "none";
+            }
+        });
+    </script>
+    <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     </script>
     <script src="categories.js"></script>
-    
   </section>
-    
-  
           <!-- Content of the selected tab will go here -->
       </main>
     </div>
