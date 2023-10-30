@@ -1,5 +1,5 @@
 // Store the path of the images in an array
-var backgrounds = ["bg6.png", "bg7.png", "bg8.png", "bg9.png"];
+var backgrounds = ["bg0.png", "bg6.png"];
 window.onload = function() {
   // Get a random index
   var index = Math.floor(Math.random() * backgrounds.length);
