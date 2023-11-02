@@ -16,43 +16,27 @@ window.onload = function(){
   });
 }
 
-const checkboxes = ["categoryCheckbox", "bodyRegionCheckbox", "treatmentTechniquesCheckbox"];
-const nestedCheckboxes = ["nestedCategoryCheckbox", "nestedBodyRegionCheckbox", "nestedTreatmentTechniquesCheckbox"];
-let btnGenerateTest;
-window.onload = function() {
-    btnGenerateTest = document.createElement("button");
-    btnGenerateTest.innerHTML = "Generate Test";
-    btnGenerateTest.disabled = true;
-    btnGenerateTest.style.position = "fixed";
-    btnGenerateTest.style.bottom = "5px";
-    btnGenerateTest.style.left = "5px";
-    document.body.appendChild(btnGenerateTest);
-    checkboxes.forEach((id, index) => {
-        const chkBox = document.getElementById(id);
-        if (chkBox != null) {
-            chkBox.addEventListener("change", function() {
-                updateButtons(this, nestedCheckboxes[index]);
-            });
-        }
-    });
-    nestedCheckboxes.forEach((id) => {
-        const nestedCheckboxes = document.getElementById(id);
-        const checkboxes = nestedCheckboxes.getElementsByTagName("input");
-        for (let i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].addEventListener("change", function() {
-                updateButtons(this, id);
-            });
-        }
-    });
-};
-function updateButtons(checkbox, nestedId) {
-    const nestedCheckboxes = document.getElementById(nestedId);
-    const checkboxes = nestedCheckboxes.getElementsByTagName("input");
-    let atLeastOneChecked = checkbox.checked;
-    for (let i = 0; i < checkboxes.length && !atLeastOneChecked; i++) {
-        if (checkboxes[i].checked) {
-            atLeastOneChecked = true;
-        }
-    }
-    btnGenerateTest.disabled = !atLeastOneChecked;
+var categoryCheckbox = document.querySelector('#categoryCheckbox');
+var bodyRegionCheckbox = document.querySelector('#bodyRegionCheckbox');
+var treatmentTechniquesCheckbox = document.querySelector('#treatmentTechniquesCheckbox');
+var categoryNestedCheckbox = document.querySelector('#nestedCategoryCheckbox');
+var bodyRegionNestedCheckbox = document.querySelector('#nestedBodyRegionCheckbox');
+var treatmentTechniquesNestedCheckbox = document.querySelector('#nestedTreatmentTechniquesCheckbox');
+// Enable the Generate Test button if the appropriate conditions are met
+function enableGenerateTestButton() {
+  if (
+    (categoryCheckbox.checked || Array.from(categoryNestedCheckbox.querySelectorAll('input[type="checkbox"]')).some(cb => cb.checked)) ||
+    (bodyRegionCheckbox.checked || Array.from(bodyRegionNestedCheckbox.querySelectorAll('input[type="checkbox"]')).some(cb => cb.checked)) ||
+    (treatmentTechniquesCheckbox.checked || Array.from(treatmentTechniquesNestedCheckbox.querySelectorAll('input[type="checkbox"]')).some(cb => cb.checked))
+  ) {
+    generateTestBtn.disabled = false;
+  } else
+    generateTestBtn.disabled = true;
 }
+// Check if generateTestBtn should be enabled whenever a checkbox is clicked
+categoryCheckbox.addEventListener('change', enableGenerateTestButton);
+categoryNestedCheckbox.addEventListener('change', enableGenerateTestButton);
+bodyRegionCheckbox.addEventListener('change', enableGenerateTestButton);
+bodyRegionNestedCheckbox.addEventListener('change', enableGenerateTestButton);
+treatmentTechniquesCheckbox.addEventListener('change', enableGenerateTestButton);
+treatmentTechniquesNestedCheckbox.addEventListener('change', enableGenerateTestButton);
