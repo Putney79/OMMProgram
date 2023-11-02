@@ -15,3 +15,19 @@ window.onload = function(){
     });
   });
 }
+
+var categoryCheckbox = document.getElementById('categoryCheckboxId');
+var bodyRegionCheckbox = document.getElementById('bodyRegionCheckboxId');
+var treatmentTechniqueCheckbox = document.getElementById('treatmentTechniqueCheckboxId');
+var generateTestBtn = document.getElementById('generateTestBtn');
+var checkboxes = [categoryCheckbox, bodyRegionCheckbox, treatmentTechniqueCheckbox];
+checkboxes.forEach(function(checkbox){
+  checkbox.addEventListener('change', function(){
+    if(categoryCheckbox.checked || bodyRegionCheckbox.checked || treatmentTechniqueCheckbox.checked){
+      generateTestBtn.disabled = false;
+    }
+    else{
+      generateTestBtn.disabled = true;
+    }
+  });
+});
