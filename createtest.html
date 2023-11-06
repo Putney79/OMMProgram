@@ -162,8 +162,33 @@
     </div>
     <hr>
     <script>
-        
+        // JavaScript to handle form submission and send data to the Python script
+function generateTest() {
+    let params = {
+        // Collect data from the checkboxes, sliders, etc.
+        user_id: 123, // Replace this with actual user ID
+        problem_count: document.getElementById("questionCount").value,
+        category_tag:, // Get the category checkboxes data,
+        region_tag:, // Get the region checkboxes data,
+        treatment_tag: // Get the treatment checkboxes data,
+        // Add other parameters as needed
+    };
 
+    // Send an HTTP request to the Python script via fetch
+    fetch('test_generate.py', {
+        method: 'POST',
+        body: JSON.stringify(params)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Process the response from the Python script
+        console.log(data);
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+    });
+}
     </script>
     <script>
         // JavaScript to update the number of questions based on the slider
