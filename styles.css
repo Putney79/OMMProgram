@@ -6,7 +6,12 @@
 .mobile-main{
     display: none;
 }
-
+.sidebar li a {
+    font-size: .9rem;
+}
+.sidebar li .performance {
+    font-size: .85rem;
+}
 a {
     text-decoration: none;
     color: rgba(0,0,0,.8)
@@ -277,7 +282,7 @@ input[type="submit"] {
         padding: 20px;
     }
     .category {
-        border: 1px solid #919191;
+        border: 1px solid #cfcfcf;
         padding: 20px;
         text-align: center;
     }
