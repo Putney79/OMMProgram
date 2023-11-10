@@ -12,9 +12,9 @@
     <div class="row homepage-container">
     <aside class="Homepage-sidebar col-2">
         <nav class="sidebar-nav">
-            <a href="index.html" class="navbar-brand"><img src="logo-removebg-preview.png" alt=""></a>
+            <a href="/admin.html" class="navbar-brand"><img src="logo-removebg-preview.png" alt=""></a>
             <ul class="list-unstyled">
-                <li><a href="index.html">Welcome</a></li>
+                <li><a href="admin.html">Welcome</a></li>
                 <li><a href="createtest.html">Create Test</a></li>
                 <li><a href="previoustests.html">Previous Tests</a></li>
                 <li><a href="performance.html">Performance</a></li>
@@ -25,14 +25,15 @@
             </ul>
         </nav>
     </aside>
-    <main class="content col-10">
-    <header class="header container-fluid ">
-    
-            <nav class="navbar navbar-expand-lg navbar-light bg-light col-12 ">
-              <div class="container-xxl">
+    <main class="content col-10 desktop-main">
+    <header class="header container">
+            <!--DESKTOP NAVBAR-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light col-12 desktop-nav">
+              <div class="container">
                 <h1>Welcome, admin!</h1>
                 <!-- OPTIONAL LOGO: <a href="/" class="navbar-brand">Logo</a>-->
-                
+                <div class="first-nav"></div>
+                <div class="second-nav"></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -87,6 +88,80 @@
   </section>
           <!-- Content of the selected tab will go here -->
       </main>
+
+      <!--MOBILE MAIN PAGE-->
+      <main class="content mobile-main">
+        <header class="mobile-header row">
+                <!-- MOBILE NAVBAR-->
+                <nav class="navbar navbar-expand-lg mobile-nav">
+                  <div class="mobile-nav-container ">
+                    <h1 class=""></h1>
+                    <a href="/admin.html" class="mobile-navbar-brand"><img src="/mobile-logo-rm-bg.png" alt=""></a>
+                    <div class="first-nav"></div>
+                    <div class="second-nav"></div>
+                    <div class="dropdown mobile-dropdown">
+                      <!--Mobile Dropdown Toggler-->
+                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Navigation</button>
+                      <ul class="dropdown-menu fade-in-transition">
+                        <li><a href="admin.html">Welcome</a></li>
+                        <li><a href="createtest.html">Create Test</a></li>
+                        <li><a href="previoustests.html">Previous Tests</a></li>
+                        <li><a href="performance.html">Performance</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="notes.html">Notes</a></li>
+                        <li><a href="flashcards.html">Flash Cards</a></li>
+                        <li><a href="help.html">Help</a></li>
+                        <li class="nav-item">
+                          <a href="/" class="nav-link">Test Date</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/admin.html" class="nav-link">My Account</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/index.html" class="nav-link">Sign Out</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </nav>
+          </header>
+          <section class="statistics">
+          <div class="main-row-1 main-row row ">
+            <div class="category col-6" style="flex-basis: 45%; margin: 10px; text-align: left;">
+              <h2>QBank Usage</h2>
+              <p><span>Used Questions: </span><span id="usedQuestions">0</span></p>
+              <p><span>Unused Questions: </span><span id="unusedQuestions">0</span></p>
+              <p><span>Total Questions: </span><span id="totalQuestions">0</span></p>
+          </div>
+          
+          <div class="category col-6" style="flex-basis: 45%; margin: 10px; text-align: right;">
+              <h2>Answers Changed</h2>
+              <p><span>Correct to Incorrect: </span> <span id="correctToIncorrect">0</span></p>
+              <p><span>Incorrect to Correct: </span> <span id="incorrectToCorrect">0</span></p>
+              <p><span>Incorrect to Incorrect: </span> <span id="incorrectToIncorrect">0</span></p>
+          </div>
+        </div>
+        <div class="main-row-2 main-row row">
+      
+          <div class="category col-6" style="flex-basis: 45%; margin: 10px; text-align: left;">
+              <h2>Your Score</h2>
+              <p><span>Total Correct: </span><span id="totalCorrect">0</span></p>
+              <p><span>Total Incorrect: </span><span id="totalIncorrect">0</span></p>
+              <p><span>Total Completed: </span><span id="totalOmitted">0</span></p>
+          </div>
+          
+          <div class="category col-6" style="flex-basis: 45%; margin: 10px; text-align: right;">
+              <h2>Test Count</h2>
+              <p><span>Tests Created: </span><span id="testsCreated">0</span></p>
+              <p><span>Tests Completed: </span><span id="testsCompleted">0</span></p>
+              <p><span>Suspended Tests: </span><span id="suspendedTests">0</span></p>
+          </div>
+        </div>
+      </section>
+              <!-- Content of the selected tab will go here -->
+          </main>
     </div>
   </body>
 </html>
