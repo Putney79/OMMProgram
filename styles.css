@@ -247,7 +247,7 @@ input[type="submit"] {
         margin-right: 10px;        
     }
     .dropdown-toggle {
-        background-color: black;
+        background-color: #171717;
     }
     .dropdown-menu {
         background-color: #272727 ;
@@ -255,14 +255,12 @@ input[type="submit"] {
     }
     .dropdown-menu li {
         padding: 8px 2px;
-        border-bottom: #ccc;
 
     }
     .dropdown-menu li a {
         display: block;
         color:white;
         font-size: 18px;
-        border-bottom: #ccc;
     }
     .fade-in-transition {
         transition: all 1s ease-in-out;
@@ -271,6 +269,17 @@ input[type="submit"] {
         display: block;
         width: 100%;
         max-width: 250px;
+    }
+    .mobile-statistics {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    .category {
+        border: 1px solid #919191;
+        padding: 20px;
+        text-align: center;
     }
     /* smartphones, Android phones, landscape iPhone */ 
 }
